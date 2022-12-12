@@ -1,22 +1,40 @@
 package com.sparta.week02.domain;
 
-import com.sparta.week02.models.CourseRequestDto;
 import com.sparta.week02.models.PersonRequestDto;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@Entity
 public class Person {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    @Column
     private String name;
+
+    @Column
     private int age;
+
+    @Column
     private String address;
+
+    @Column
     private String job;
+
+    @Column
     private String tel1;
+
+    @Column
     private String tel2;
 
 
-    public void Person() {
+
+    public Person() {
         System.out.println("Person Class 기본생성자");
     }
 

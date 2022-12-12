@@ -7,8 +7,10 @@ import com.sparta.week02.models.CourseRequestDto;
 import com.sparta.week02.models.PersonRequestDto;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
+@Service
 public class PersonService {
 
     private final PersonRepository personRepository;
